@@ -1873,6 +1873,20 @@ ul.radio-w3ls li {
 	}
 }
 @media(max-width: 991px){
+
+	.bestServices{
+		margin-top: 0!important;
+	}
+	.taxiCab{
+		margin-top: 0!important;
+	}
+	.traveller{
+		margin-top: 48px!important;
+	}
+	.airport{
+		margin-top: 48px!important;
+	}
+
 	.footer-grid-agileits-w3ls1, .footer-grid-agileits-w3ls {
 		padding: 0 15px;
 	}
@@ -2037,6 +2051,16 @@ ul.radio-w3ls li {
 		width: 40%;
 	}
 }
+
+@media(max-width: 575px){
+
+	.taxiCab{
+		margin-top: 48px!important;
+	}
+}
+	
+
+
 @media(max-width: 568px){
 	.banner-info h1, .banner-info h2, .banner-info h4, .banner-info h5 {
 		font-size: 2em;
@@ -2233,3 +2257,14 @@ ul.radio-w3ls li {
 	}
 }
 /*-- //Responsive Design --*/
+
+
+/* floating-icon */
+#feedback-form-wrapper #floating-icon > a {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: rotate(-90deg) translate(50%, -50%);
+	transform-origin: right;
+  }
+  
