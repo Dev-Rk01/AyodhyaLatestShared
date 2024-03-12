@@ -1,12 +1,13 @@
 const express = require('express');
 const sgMail = require('@sendgrid/mail');
 const bodyParser = require('body-parser');
+const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const SENDGRID_API_KEY = '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';
 
-app.use(express.static('public'));
 app.use(bodyParser.json());
 
 sgMail.setApiKey(SENDGRID_API_KEY);
@@ -31,6 +32,9 @@ app.post('/send-email', (req, res) => {
       res.status(500).json({ message: 'Failed to send email.' });
     });
 });
+
+// Serve static files from the 'public' folder
+app.use(express.static(path.join(__dirname, '')));
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
