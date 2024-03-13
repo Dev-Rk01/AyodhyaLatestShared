@@ -11,7 +11,7 @@ html{
 body{
 	padding:0;
 	margin:0;
-	background:#fff;
+	background:#ffc107;
 	position:relative;
 	font-family: 'Raleway', sans-serif;
 	overflow-x: hidden;
@@ -74,7 +74,7 @@ img{
 /*--top-bar --*/
 
 .top-bar {
-	background: #fff;
+	background: #ffc107;
     padding: 0.3em 2em;
 	position: relative;
 }
@@ -1518,7 +1518,9 @@ i.fa.fa-smile {
     color: #fff;
 }
 .prices {
-    background: url(../images/price.jpg) no-repeat 0px 0px;
+    background: 
+        linear-gradient(rgb(248, 182, 0.2), rgba(252, 210, 0, 0.1)), /* Yellow overlay */
+        url(../images/price.jpg) no-repeat 0px 0px; /* Background image */
     background-size: cover;
     background-attachment: fixed;
 }
