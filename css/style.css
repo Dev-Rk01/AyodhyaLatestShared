@@ -1564,9 +1564,11 @@ i.fa.fa-smile {
 
 
 .banner {
-    background: url(../images/price.jpg) no-repeat 0px 0px;
+    background: 
+        linear-gradient(rgba(248, 182, 0, 0.5), rgba(252, 210, 0, 0.4)), /* Yellow overlay */
+        url(../images/price.jpg) no-repeat 0px 0px; /* Background image */
     background-size: cover;
-    min-height: 300px;
+    min-height: 500px;
 }
 
 
