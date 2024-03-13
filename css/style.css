@@ -11,7 +11,7 @@ html{
 body{
 	padding:0;
 	margin:0;
-	background:#fff;
+	background:#e7e7e7;
 	position:relative;
 	font-family: 'Raleway', sans-serif;
 	overflow-x: hidden;
@@ -1388,10 +1388,10 @@ i.fa.fa-smile {
 
 /*-- booking --*/
 .booking{
-	background: #00bcd4;
+	background:  #ffc107;
 }
 .booking h3{
-    color: #eee;
+    color: #5e5e5e;
     letter-spacing: 2px;
     font-size: 33px;
     text-transform: capitalize;
@@ -1399,7 +1399,7 @@ i.fa.fa-smile {
 .booking p {
     margin: 0;
     font-size: 16px;
-    color: #ddd;
+    color: #5e5e5e;
     letter-spacing: 1px;
     line-height: 30px;
     width: 75%;
@@ -1410,7 +1410,7 @@ i.fa.fa-smile {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #fff;
+    color: #5e5e5e;
     padding: 15px 40px;
     border: 2px solid #fff;
     border-radius: 3px;
