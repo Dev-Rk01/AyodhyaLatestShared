@@ -1988,8 +1988,10 @@ ul.radio-w3ls li {
 		left: 45%;
 	}
 	a.navbar-brand{
-		padding-top: 10px;
 		padding-left: 0%;
+	}
+	a.navbar-brand{
+		font-size: 1.1em;
 	}
 	.fas, .fa-taxi{
 		display: none!important;
