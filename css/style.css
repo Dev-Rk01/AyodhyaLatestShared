@@ -1840,6 +1840,17 @@ ul.radio-w3ls li {
 		font-size: 1.6em;
 	}
 }
+
+@media(max-width: 1193px){
+	
+	#mailbtn{
+		margin-left: 0px;
+	}
+
+}
+
+
+
 @media(max-width: 1080px){
 	a.facebook {
 		font-size: 13px;
@@ -1855,8 +1866,24 @@ ul.radio-w3ls li {
 	}
 
 	#mailbtn{
-		margin-left: 100px;
+		margin-left: 0px;
 	}
+	a.navbar-brand{
+		font-size: 1.4em;
+	}
+	.col-md-4, .col-sm-6, .logo{
+		padding-right: 0%!important;
+		padding-left: 0%!important;
+		margin-left: 0%!important;
+		margin-right: 0%!important;
+		margin-right: 0%!important;
+	}
+
+	#mailbtn>a{
+		padding-left: 0%;
+	}
+
+
 }
 @media(max-width: 1024px){
 	.footer-grid-agileits-w3ls1, .footer-grid-agileits-w3ls {
@@ -1873,7 +1900,7 @@ ul.radio-w3ls li {
 	}
 
 	#mailbtn{
-		margin-left: 100px;
+		margin-left: 0px;
 	}
 }
 @media(max-width: 991px){
@@ -1955,7 +1982,7 @@ ul.radio-w3ls li {
 	}
 
 	#mailbtn{
-		margin-left: 100px;
+		margin-left: 0px;
 	}
 }
 @media(max-width: 900px){
