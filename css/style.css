@@ -1993,9 +1993,6 @@ ul.radio-w3ls li {
 	a.navbar-brand{
 		font-size: 1.1em;
 	}
-	.fas, .fa-taxi{
-		display: none!important;
-	}
 }
 @media(max-width: 800px){
 	.centered-btns_tabs, .transparent-btns_tabs, .large-btns_tabs {
