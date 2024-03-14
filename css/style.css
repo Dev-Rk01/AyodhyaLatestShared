@@ -1871,13 +1871,13 @@ ul.radio-w3ls li {
 	a.navbar-brand{
 		font-size: 1.4em;
 	}
-	.col-md-4, .col-sm-6, .logo{
+	/* .col-md-4.col-sm-6.logo{
 		padding-right: 0%!important;
 		padding-left: 0%!important;
 		margin-left: 0%!important;
 		margin-right: 0%!important;
 		margin-right: 0%!important;
-	}
+	} */
 
 	/* #mailbtn>a{
 		padding-left: 3%;
