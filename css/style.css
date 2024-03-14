@@ -1879,9 +1879,9 @@ ul.radio-w3ls li {
 		margin-right: 0%!important;
 	}
 
-	#mailbtn>a{
-		padding-left: 0%;
-	}
+	/* #mailbtn>a{
+		padding-left: 3%;
+	} */
 
 
 }
@@ -1981,13 +1981,18 @@ ul.radio-w3ls li {
 		margin-top: 0px;
 	}
 
-	#mailbtn{
-		margin-left: 0px;
-	}
+	
 }
 @media(max-width: 900px){
 	.centered-btns_tabs, .transparent-btns_tabs, .large-btns_tabs {
 		left: 45%;
+	}
+	a.navbar-brand{
+		padding-top: 10px;
+		padding-left: 0%;
+	}
+	.fas, .fa-taxi{
+		display: none!important;
 	}
 }
 @media(max-width: 800px){
