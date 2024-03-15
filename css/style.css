@@ -2304,9 +2304,9 @@ ul.radio-w3ls li {
 
   #feedback-form-wrapper #floating-icon > a > img {
 
-	&:hover {
+	/* &:hover {
 		animation-play-state: paused;
-	}
+	} */
 
 	animation: watsApp 0.8s linear infinite;
   }
@@ -2328,9 +2328,9 @@ ul.radio-w3ls li {
 
   #feedback-form-wrapper-telephone #floating-icon-telephone > a > img {
 	
-	&:hover {
+	/* &:hover {
 		animation-play-state: paused;
-	}
+	} */
 
 	animation: telephone 1s linear infinite;
   }
