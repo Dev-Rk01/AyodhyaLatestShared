@@ -2294,11 +2294,11 @@ ul.radio-w3ls li {
 /*-- //Responsive Design --*/
 
 
-/* floating-icon */
+/* floating-icon whatsapp */
 #feedback-form-wrapper #floating-icon > a {
 	position: fixed;
 	right: 5px;
-	top: 89%;
+	top: 92%;
 	z-index: 999;
   }
 
@@ -2308,12 +2308,36 @@ ul.radio-w3ls li {
 		animation-play-state: paused;
 	}
 
-	animation: watsApp 1s linear infinite;
+	animation: watsApp 0.8s linear infinite;
   }
 
 @keyframes watsApp {
-  0%   {transform: scale(0.6)}
+  0%   {transform: scale(0.8)}
   50%  {transform: scale(1)}
-  100%  {transform:scale(0.6)}
+  100%  {transform:scale(0.8)}
+}
+
+
+/* floating-icon telephone */
+#feedback-form-wrapper-telephone #floating-icon-telephone > a {
+	position: fixed;
+	right: 5px;
+	top: 84%;
+	z-index: 999;
+  }
+
+  #feedback-form-wrapper-telephone #floating-icon-telephone > a > img {
+	
+	&:hover {
+		animation-play-state: paused;
+	}
+
+	animation: telephone 1s linear infinite;
+  }
+
+@keyframes telephone {
+  0%   {transform: rotateZ(90deg)}
+  50%  {transform: rotateZ(0deg)}
+  100%  {transform:rotateZ(90deg)}
 }
   
