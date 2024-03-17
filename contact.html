@@ -126,11 +126,11 @@
 					<h3>Send us a message</h3>
 				</div>
 				<div class="agileinfo-contact-form-grid">
-					<form id="contactForm" action="/send-email" method="POST">
+					<form id="contactForm">
 						<input class="name" type="text" id="name" name="name" placeholder="Name" required>
 						<span id="nameError" class="error"></span><br><br>
 
-						<input class="subject" type="text" name="Subject" placeholder="Subject" required>
+						<input class="subject" type="text" name="Subject" id="subject" placeholder="Subject" required>
 						<span id="subjectError" class="error"></span><br><br>
 
 						<input class="email" type="email" id="email" name="email" placeholder="Email" required>
@@ -138,7 +138,7 @@
 
 						<textarea class="msg" name="message" id="message" placeholder="Message" required></textarea>
 						<span id="messageError" class="error"></span><br><br>
-						<button type="submit" value="Submit" class="btn1">Submit</button>
+						<button type="button" value="button" class="btn1" id="sendButton">Submit</button>
 					</form>
 				</div>
 			</div> 
@@ -420,53 +420,87 @@
 	<script src="https://kit.fontawesome.com/2b65b05807.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script src="sendEmail.js"></script>
 	<!-- //js -->
 
+	<script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('BR338AelyOy1m8o6E');
+        })();
+    </script>
 	<script>
-		const form = document.getElementById('contactForm');
-		const nameInput = document.getElementById('name');
-		const emailInput = document.getElementById('email');
-		const subjectInput = document.getElementById('subject');
-		const messageInput = document.getElementById('message');
-		const nameError = document.getElementById('nameError');
-		const emailError = document.getElementById('emailError');
-		const subjectError = document.getElementById('subjectError');
-		const messageError = document.getElementById('messageError');
-	
-		form.addEventListener('submit', function(event) {
-		  let isValid = true;
-	
-		  // Name validation
-		  if (nameInput.value.trim() === '') {
-			nameError.textContent = 'Name is required';
-			isValid = false;
-		  } else {
-			nameError.textContent = '';
-		  }
-	
-		  // Email validation
-		  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		  if (!emailPattern.test(emailInput.value.trim())) {
-			emailError.textContent = 'Enter a valid email address';
-			isValid = false;
-		  } else {
-			emailError.textContent = '';
-		  }
-	
-		  // Message validation
-		  if (messageInput.value.trim() === '') {
-			messageError.textContent = 'Message is required';
-			isValid = false;
-		  } else {
-			messageError.textContent = '';
-		  }
-	
-		  if (!isValid) {
-			event.preventDefault(); // Prevent form submission if validation fails
-		  }
-		});
-	  </script>
+
+		//Validation
+		document.addEventListener('DOMContentLoaded', function() {
+		function validateAndSend() {
+		const name = document.getElementById('name').value;
+		const email = document.getElementById('email').value;
+		const subject = document.getElementById('subject').value;
+		const message = document.getElementById('message').value;
+
+		// Simple email validation
+		// var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		// if (!emailRegex.test(email)) {
+		// 	alert('Please enter a valid email address.');
+		// 	return;
+		// }
+
+		// Check if name is provided
+		if (name.trim() === '') {
+			alert('Please enter your name.');
+			return;
+		}
+
+		// Check if name is provided
+		if (subject.trim() === '') {
+			alert('Please enter the subject.');
+			return;
+		}
+
+		// Check if message is provided
+		if (message.trim() === '') {
+			alert('Please enter a message.');
+			return;
+		}
+
+		// If all fields are valid, send the email
+		sendEmail(name, email,subject, message);
+		}
+
+
+		// Function to send email
+		function sendEmail(name, email,subject, message) {
+		// Get form values or set message parameters
+		var params = {
+			reply_to: email,
+			name: name,
+			email:email,
+			subject:subject,
+			message: message,
+		};
+
+		// Send the email
+		emailjs.send('service_8srrhpu', 'template_578xa69', params)
+			.then(function(response) {
+			console.log('Email sent successfully!', response);
+			alert('Email sent successfully!');
+			document.getElementById('contactForm').reset(); // Reset the form after successful send
+			}, function(error) {
+			console.error('Error sending email:', error);
+			alert('Error sending email. Please try again later.');
+			});
+		}
+
+		// Attach validateAndSend function to button click
+		var sendButton = document.getElementById('sendButton');
+		if (sendButton) {
+			sendButton.addEventListener('click', validateAndSend);
+		}
+	});
+
+    </script>
 
 
 	<!-- carousel -->
